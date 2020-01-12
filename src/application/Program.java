@@ -34,7 +34,7 @@ public class Program {
 
 		list.forEach(System.out::println);
 		
-		/*
+		
 		System.out.println("\n\n=== Result 4: Insert ===\n");
 		
 		Seller seller2 = new Seller();
@@ -56,7 +56,7 @@ public class Program {
 		else {
 			throw new DbException ("Error including seller.");
 		}
-		*/
+		
 		
 		System.out.println("\n\n=== Result 5: Update seller ===\n");
 		

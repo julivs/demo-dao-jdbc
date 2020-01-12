@@ -106,7 +106,7 @@ public class SellerDaoJDBC implements SellerDao {
 			int rowsAffected = st.executeUpdate();
 			
 			if (rowsAffected == 0) {
-				throw new DbException("Failed to delete seller.");
+				throw new DbException("Failed to delete seller. Id not found.");
 			}				
 		} catch (SQLException e) {
 			throw new DbException(e.getMessage());
