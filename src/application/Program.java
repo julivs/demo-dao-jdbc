@@ -34,6 +34,7 @@ public class Program {
 
 		list.forEach(System.out::println);
 		
+		/*
 		System.out.println("\n\n=== Result 4: Insert ===\n");
 		
 		Seller seller2 = new Seller();
@@ -55,6 +56,24 @@ public class Program {
 		else {
 			throw new DbException ("Error including seller.");
 		}
+		*/
+		
+		System.out.println("\n\n=== Result 5: Update seller ===\n");
+		
+		seller = sellerDao.findById(7);
+		seller.setBaseSalary(3500.0);
+		
+		sellerDao.update(seller);
+		
+		list = sellerDao.findAll();
+		list.forEach(System.out::println);
+		
+System.out.println("\n\n=== Result 6: Delete seller ===\n");
+		
+		sellerDao.deleteById(7);
+		
+		list = sellerDao.findAll();
+		list.forEach(System.out::println);
 	}
 
 }
